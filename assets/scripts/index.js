@@ -2,20 +2,32 @@ const openMenuBtn = document.querySelector(".open-mobile-menu__btn");
 const closeMenuBtn = document.querySelector(".close-mobile-menu__btn");
 const mobileNav = document.querySelector(".mobile__nav");
 
+const headerTitle = document.querySelector(".social-links");
+const tinting = document.querySelector(".tinting");
+
 openMenuBtn.addEventListener("click", () => {
-  mobileNav.style.transform = "translateX(0)";
+  tinting.style.display = "block";
+  gsap.to(tinting, {opacity: "1", duration: 0.5});
+  mobileNav.style.transform = "translateX(30%)";
   document.documentElement.style.overflow = "hidden";
   document.body.style.overflow = "hidden";
+  gsap.to(headerTitle, {opacity: "0", duration: 0.5});
 });
 closeMenuBtn.addEventListener("click", () => {
+  gsap.to(tinting, {opacity: "0", duration: 0.5});
+  tinting.style.display = "none";
   mobileNav.style.transform = "translateX(100%)";
   document.documentElement.style.overflow = "inherit";
   document.body.style.overflow = "inherit";
+  gsap.to(headerTitle, {opacity: "1", duration: 0.5});
 });
 
 mobileNav.addEventListener("click", (e) => {
   console.log(e.target.tagName);
   if (e.target.tagName === "A") {
+    gsap.to(tinting, {opacity: "0", duration: 0.5});
+    tinting.style.display = "none";
+    gsap.to(headerTitle, {opacity: "1", duration: 0.5});
     mobileNav.style.transform = "translateX(100%)";
     document.documentElement.style.overflow = "inherit";
     document.body.style.overflow = "inherit";

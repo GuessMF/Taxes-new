@@ -59,8 +59,10 @@ p {
     margin-top: 50px;
   }
   h1 {
-    font-size: 32px;
-    line-height: 44px;
+    /* font-size: 32px;
+    line-height: 44px; */
+    font-size: 26px;
+    line-height: 38px;
   }
   h2 {
     font-size: 26px;
@@ -86,19 +88,10 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  /* 
-  max-height: 92svh;
-  min-height: 92svh; */
-  /* height: 100vh; */
   height: 92svh;
   border: black 1p solid;
-
   justify-content: end;
-  /* height: fit-content; */
-  /* min-height: 92svh; */
-
   background: linear-gradient(to left top, #ffffff, #ffffff, #115085);
-  /* padding: 0 40px; */
   padding: 86px 40px 0 40px;
 }
 
@@ -162,18 +155,14 @@ p {
 .slider-photo__block img {
   width: 100%;
   max-width: 600px;
-
   width: 100%;
   max-width: 600px;
-  height: 100%; /* Добавьте эту строку */
-
-  /* max-height: 600px;
-  width: auto; */
+  height: 100%;
 }
 
 .second-slider-photo {
-  width: 100%; /* Убедитесь, что ширина 100% */
-  height: 100%; /* Добавьте эту строку */
+  width: 100%;
+  height: 100%;
 }
 .second-slide {
   display: none;
@@ -224,16 +213,12 @@ p {
 @media (max-width: 850px) {
   .slider {
     justify-content: center;
-    /* height: fit-content; */
     min-height: 150svh;
-    /* height: auto; */
     height: 160vh;
-    /* height: 160svh; */
   }
   .slider__wrapper {
     display: flex;
     flex-direction: column;
-    /* justify-content: end; */
     justify-content: space-between;
     height: 100%;
   }
@@ -269,8 +254,6 @@ p {
 
   .slider-photo__block {
     width: 100%;
-    /* flex-direction: row;
-    justify-content: center; */
   }
   .slider-photo__block img {
     width: 60%;
@@ -288,12 +271,16 @@ p {
 @media (max-width: 450px) {
   .slider {
     padding: 0 20px;
+    height: 100svh;
+    min-height: 100svh;
   }
   .slider__wrapper .information {
     width: 100%;
-    height: 80vh;
-    gap: 0;
+    /* height: 80vh; */
+    /* gap: 0; */
+    gap: 15px;
     justify-content: space-around;
+    padding: 20px 0;
   }
   h1 {
     text-align: center;
@@ -307,7 +294,7 @@ p {
   }
 
   .slider-photo__block img {
-    width: 100%;
+    width: 70%;
   }
 
   .slider .prev-btn {

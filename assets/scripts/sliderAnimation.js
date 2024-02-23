@@ -294,7 +294,7 @@ const changeSlides = () => {
   }
 };
 
-// setInterval(changeSlides, 5000);
+//setInterval(changeSlides, 5000);
 
 const stage2Slider1 = () => {
   gsap.to(slider, {

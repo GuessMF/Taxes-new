@@ -109,6 +109,22 @@ header {
   scale: 1.3;
 }
 
+header .tinting {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(17, 80, 133, 0.47),
+    rgba(30, 90, 138, 0.47),
+    rgba(43, 103, 152, 0.47)
+  );
+  z-index: 99;
+  display: none;
+  opacity: 0;
+}
+
 header .desktop__nav ul {
   display: flex;
   flex-direction: row;
@@ -149,10 +165,9 @@ header .close-mobile-menu__btn {
 }
 header .mobile__nav {
   background: linear-gradient(
-    to left bottom,
-    rgb(255, 255, 255),
-    rgb(255, 255, 255),
-    rgb(17, 80, 133)
+    rgba(17, 80, 133, 0.97),
+    rgba(30, 90, 138, 0.97),
+    rgba(43, 103, 152, 0.97)
   );
   position: absolute;
   top: 0;
@@ -177,7 +192,7 @@ header .mobile__nav .mobile__links {
 }
 header .mobile__nav .mobile__links a {
   text-decoration: none;
-  color: #115085;
+  color: #ffffff;
   font-size: 18px;
   font-weight: 500;
 }
@@ -219,12 +234,12 @@ header .mobile__nav .mobile__links a {
   align-items: start;
   gap: 20px;
   font-size: 18px;
-  color: #115085;
+  color: #ffffff;
   padding: 0;
 }
 .mobile__nav .mobile__working-time a {
   text-decoration: none;
-  color: #115085;
+  color: #ffffff;
 }
 
 header .mobile__nav .mobile-nav__header {
@@ -232,7 +247,7 @@ header .mobile__nav .mobile-nav__header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 15px 20px;
 }
 header .mobile__nav .mobile-nav__header h5 {
   color: #115085;
